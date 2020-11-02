@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git  url: 'https://github.com/lldpwr/WebShell.git'
+        git branch: 'main', url: 'https://github.com/lldpwr/WebShell.git'
       }
     }
     stage('Building image') {
