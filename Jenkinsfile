@@ -11,10 +11,17 @@ pipeline {
         git branch: 'main', url: 'https://github.com/lldpwr/WebShell.git'
       }
     }
+    stage('install') {
+      steps{
+        script {
+          pwsh returnStatus:true  ,script:"Install-Module -Name Pode -Confirm:$false -force"
+        }
+      }
+    }
     stage('test') {
       steps{
         script {
-          pwsh "cd site; ./launch.ps1 -whatif"
+          pwsh returnStatus:true  ,script:"cd site; ./launch.ps1 -whatif"
         }
       }
     }
