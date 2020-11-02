@@ -31,5 +31,5 @@ pipeline {
 }
 
 
-correct branch for main in pipeline from scm
-add docker
+// correct branch for main in pipeline from scm
+// add docker plugin
