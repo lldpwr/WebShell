@@ -11,6 +11,13 @@ pipeline {
         git branch: 'main', url: 'https://github.com/lldpwr/WebShell.git'
       }
     }
+    stage('test') {
+      steps{
+        script {
+          pwsh "cd /usr/src/app; ./launch.ps1"
+        }
+      }
+    }
     stage('Building image') {
       steps{
         script {
