@@ -1,7 +1,5 @@
 [CmdletBinding()]
 param (
-    [Parameter()]
-    [TypeName]
     $ExernalPort=8085
 )
 Import-Module pode
