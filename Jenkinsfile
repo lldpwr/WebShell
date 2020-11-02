@@ -14,7 +14,7 @@ pipeline {
     stage('test') {
       steps{
         script {
-          pwsh "cd /usr/src/app; ./launch.ps1"
+          pwsh "cd site; ./launch.ps1 -whatif"
         }
       }
     }
