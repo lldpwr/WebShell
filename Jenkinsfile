@@ -14,7 +14,7 @@ pipeline {
     stage('install') {
       steps{
         script {
-          pwsh returnStatus:true  ,script:"Install-Module -Name Pode -Confirm:$false -force"
+          pwsh returnStatus:true  ,script:'Install-Module -Name Pode -Confirm:$false -force'
         }
       }
     }
