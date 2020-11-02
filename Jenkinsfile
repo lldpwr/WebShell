@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = 'lldpwr/WebShell'
+    registry = 'lldpwr/webshell'
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -30,3 +30,6 @@ pipeline {
   }
 }
 
+
+correct branch for main in pipeline from scm
+add docker
