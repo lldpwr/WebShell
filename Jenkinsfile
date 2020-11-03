@@ -21,7 +21,7 @@ pipeline {
     stage('test') {
       steps{
         script {
-          pwsh returnStatus:true  ,script:"cd site; ./launch.ps1 -whatif"
+          pwsh returnStatus:true  ,script:"cd site; ./test.ps1"
         }
       }
     }
